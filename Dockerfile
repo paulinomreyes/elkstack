@@ -1,6 +1,6 @@
 FROM centos
 
-RUN adduser -u 1000 -S elk -G root
+RUN adduser -u 1000 elk -G root
 
 RUN mkdir -p /opt/elastic \
   && cd /opt/elastic \
