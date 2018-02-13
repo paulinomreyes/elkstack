@@ -1,4 +1,7 @@
 FROM centos
+
+RUN adduser -u 1000 -S elk -G root
+
 RUN mkdir -p /opt/elastic \
   && cd /opt/elastic \
   && yum -y install java-1.8.0-openjdk-headless tar \
@@ -16,3 +19,5 @@ WORKDIR /opt/elastic
 VOLUME /tmp/elastic /tmp/kibana
 
 EXPOSE 9200 5601
+
+USER elk
