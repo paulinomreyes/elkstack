@@ -13,7 +13,6 @@ RUN chmod -R a=u /opt/elastic
 RUN chmod -R a=u /opt/kibana
 WORKDIR /opt/elastic
 
-
 VOLUME /tmp/elastic /tmp/kibana
 
 EXPOSE 9200 5601
